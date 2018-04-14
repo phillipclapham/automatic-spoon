@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="Description" content="Phillip Clapham's Professional Portfolio">
+  <title>Phillip Clapham || Software Developer</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Ultra|Shadows+Into+Light);
+    .container,
+    body,
+    html {
+      height: 100%
+    }
+
+    .container,
+    .mainContainer,
+    body {
+      display: block
+    }
+
+    @keyframes conFadeIn {
+      0% {
+        opacity: 0
+      }
+      100% {
+        opacity: 1
+      }
+    }
+
+    @keyframes sectionScrollIn1 {
+      0% {
+        left: 100%
+      }
+      100% {
+        left: 0
+      }
+    }
+
+    @keyframes sectionScrollIn2 {
+      0% {
+        right: 100%
+      }
+      100% {
+        right: 0
+      }
+    }
+
+    @keyframes sectionScrollUp {
+      0% {
+        top: 100%
+      }
+      100% {
+        top: 0
+      }
+    }
+
+    @keyframes sectionScrollDown {
+      0% {
+        bottom: 100%
+      }
+      100% {
+        bottom: 0
+      }
+    }
+
+    @keyframes rocker {
+      0%,
+      100% {
+        transform: translateX(-50%) rotateX(0) rotate(-1deg)
+      }
+      50% {
+        transform: translateX(-50%) rotateX(0) rotate(1deg)
+      }
+    }
+
+    @keyframes scrollTextRight {
+      0% {
+        left: -50%
+      }
+      100% {
+        left: 150%
+      }
+    }
+
+    @keyframes scrollTextLeft {
+      0% {
+        left: 150%
+      }
+      100% {
+        left: -50%
+      }
+    }
+
+    @keyframes colorChange {
+      0%,
+      100% {
+        color: rgba(255, 0, 0, .3)
+      }
+      20% {
+        color: rgba(21, 255, 0, .3)
+      }
+      40% {
+        color: rgba(4, 0, 255, .3)
+      }
+      60% {
+        color: rgba(255, 217, 0, .3)
+      }
+      80% {
+        color: rgba(255, 0, 255, .3)
+      }
+    }
+
+    @keyframes overlayColorChange {
+      0%,
+      100% {
+        background: rgba(128, 0, 128, .2)
+      }
+      20% {
+        background: rgba(0, 23, 128, .2)
+      }
+      40% {
+        background: rgba(128, 0, 0, .2)
+      }
+      60% {
+        background: rgba(21, 128, 0, .2)
+      }
+      80% {
+        background: rgba(128, 115, 0, .2)
+      }
+    }
+
+    @keyframes textBackChange {
+      0%,
+      100% {
+        background: rgba(0, 0, 0, .9)
+      }
+      50% {
+        background: rgba(0, 0, 0, .1)
+      }
+    }
+
+    @keyframes borderShift {
+      0%,
+      100% {
+        border-radius: 15px
+      }
+      50% {
+        border-radius: 0
+      }
+    }
+
+    @keyframes scrollBoxRight {
+      from {
+        left: -50%
+      }
+      to {
+        left: 50%
+      }
+    }
+
+    @keyframes scrollBoxLeft {
+      from {
+        left: 150%
+      }
+      to {
+        left: 50%
+      }
+    }
+
+    @keyframes scrollBoxRightOut {
+      from {
+        left: 50%
+      }
+      to {
+        left: 150%
+      }
+    }
+
+    @keyframes scrollBoxLeftOut {
+      from {
+        left: 50%
+      }
+      to {
+        left: -50%
+      }
+    }
+
+    @keyframes scrollBoxTight {
+      from,
+      to {
+        left: 50%
+      }
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      background: #000;
+      user-select: none
+    }
+
+    .container {
+      width: 100%;
+      overflow: hidden;
+      opacity: 1;
+      animation: conFadeIn 5s 1
+    }
+
+    .row {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0 0 10px
+    }
+
+    .row::after {
+      display: block;
+      clear: both;
+      content: ""
+    }
+
+    .col-1 {
+      width: 8.33%
+    }
+
+    .col-2 {
+      width: 16.66%
+    }
+
+    .col-3 {
+      width: 25%
+    }
+
+    .col-4 {
+      width: 33.33%
+    }
+
+    .col-5 {
+      width: 41.66%
+    }
+
+    .col-6 {
+      width: 50%
+    }
+
+    .col-7 {
+      width: 58.33%
+    }
+
+    .col-8 {
+      width: 66.66%
+    }
+
+    .col-9 {
+      width: 75%
+    }
+
+    .col-10 {
+      width: 83.33%
+    }
+
+    .col-11 {
+      width: 91.66%
+    }
+
+    .col-12 {
+      width: 100%
+    }
+
+    [class*=col-] {
+      padding: 0;
+      margin: 0
+    }
+
+    .topNav {
+      height: 10%;
+      background: linear-gradient(to bottom, #333, #000)
+    }
+
+    .topNav div h1 {
+      font-family: Ultra, sans-serif;
+      font-weight: 300;
+      font-size: 1.5rem;
+      color: #fff;
+      margin-left: 40px;
+      margin-top: 10px
+    }
+
+    .topNav div h1.missionText {
+      display: inline-block;
+      font-family: "Shadows Into Light", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #000;
+      text-align: center;
+      background: #fff;
+      margin-left: 0;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%) rotateX(0) rotate(-1deg);
+      padding: 5px 15px;
+      box-shadow: 2px 2px 5px rgba(255, 255, 255, .5);
+      border: 2px solid #000;
+      border-radius: 5px;
+      animation: conFadeIn 5s 1, rocker 30s infinite;
+      margin-top: 10px
+    }
+
+    .contactBox h1,
+    .sectionRow div h1 {
+      margin: 0;
+      transform: translateY(-50%);
+      font-family: Ultra, sans-serif;
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+      font-weight: 100
+    }
+
+    .siteHead {
+      height: 65%;
+      padding-bottom: 0;
+      background: linear-gradient(180deg, #000 5%, #333 40%, #000 100%)
+    }
+
+    .bottomNav,
+    .sectionRow {
+      height: 12.5%;
+      padding: 0
+    }
+
+    .sectionRow {
+      background: #000;
+      text-align: center
+    }
+
+    .sectionRow div h1 {
+      padding: 0;
+      position: relative;
+      top: 50%
+    }
+
+    .contactBox,
+    .linkBox,
+    .profileBox,
+    .projectBox {
+      height: 100%;
+      position: relative
+    }
+
+    .profileBox {
+      background: linear-gradient(to bottom, #3498db, #175782);
+      border-top: 10px solid #000;
+      border-right: 1px solid #000;
+      border-bottom: 1px solid #000;
+      border-left: 10px solid #000;
+      left: 0;
+      animation: sectionScrollIn1 2s 1
+    }
+
+    .profileBox:active,
+    .profileBox:hover {
+      background: #000;
+      border: 5px solid #fff
+    }
+
+    .projectBox {
+      background: linear-gradient(to bottom, #27ae60, #13532e);
+      border-top: 10px solid #000;
+      border-right: 1px solid #000;
+      border-bottom: 1px solid #000;
+      border-left: 1px solid #000;
+      top: 0;
+      animation: sectionScrollUp 2s 1
+    }
+
+    .projectBox:active,
+    .projectBox:hover {
+      background: #000;
+      border: 5px solid #fff
+    }
+
+    .linkBox {
+      background: linear-gradient(to bottom, #e74c3c, #9f2214);
+      border-top: 10px solid #000;
+      border-right: 10px solid #000;
+      border-bottom: 1px solid #000;
+      border-left: 1px solid #000;
+      right: 0;
+      animation: sectionScrollIn2 2s 1
+    }
+
+    .linkBox:active,
+    .linkBox:hover {
+      background: #000;
+      border: 5px solid #fff
+    }
+
+    .contactBox {
+      text-align: center;
+      background: linear-gradient(to bottom, #e67e22, #8a480f);
+      border-top: 1px solid #000;
+      border-right: 1px solid #000;
+      border-bottom: 10px solid #000;
+      border-left: 1px solid #000;
+      top: 0;
+      animation: sectionScrollUp 2s 1
+    }
+
+    .contactBox:active,
+    .contactBox:hover {
+      background: #000;
+      border: 5px solid #fff
+    }
+
+    .spacer1,
+    .spacer2 {
+      background: linear-gradient(to top, #111, #222);
+      border-top: 1px solid #000;
+      border-bottom: 10px solid #000;
+      z-index: 1;
+      position: relative;
+      animation: sectionScrollDown 2s 1;
+      height: 100%;
+      bottom: 0
+    }
+
+    .contactBox h1 {
+      display: block;
+      padding: 0;
+      position: relative;
+      top: 50%;
+      font-size: 1.5em
+    }
+
+    .spacer1 {
+      border-right: 1px solid #000;
+      border-left: 10px solid #000
+    }
+
+    .spacer2 {
+      border-right: 10px solid #000;
+      border-left: 1px solid #000
+    }
+
+    .mobileHeadExt {
+      display: none
+    }
+
+    .missionBox,
+    .nameBox {
+      margin-top: 5px
+    }
+
+    .downArrow {
+      margin: 0;
+      display: inline-block;
+      text-align: center;
+      color: #fff;
+      font-size: 2rem;
+      position: absolute;
+      top: 1%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, .3)
+    }
+
+    .picBox,
+    .picBoxPos1,
+    .picBoxPos2 {
+      position: relative
+    }
+
+    .downArrow:hover {
+      color: #000
+    }
+
+    .picBox {
+      display: block;
+      height: 100%
+    }
+
+    .picBoxPos1 {
+      bottom: 0;
+      opacity: 1;
+      animation: sectionScrollDown 2s 1, conFadeIn 5s 1
+    }
+
+    .picBoxPos2 {
+      bottom: 0;
+      opacity: 1;
+      animation: conFadeIn 2s 1
+    }
+
+    .picBox2,
+    .picBox3,
+    .picBox4,
+    .picBox5 {
+      display: none;
+      height: 100%;
+      position: relative;
+      bottom: 0;
+      animation: sectionScrollUp 2s 1;
+      border-top: 5px solid #000;
+      border-left: 10px solid #000;
+      border-right: 10px solid #000;
+      z-index: 0
+    }
+
+    .picBox2 {
+      background: #3498db
+    }
+
+    .picBox3 {
+      background: #27ae60
+    }
+
+    .picBox4 {
+      background: #e74c3c
+    }
+
+    .picBox5 {
+      background: #e67e22
+    }
+
+    .meImgBox {
+      height: 40%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%)
+    }
+
+    .meImg,
+    .meImgImg,
+    .meImgOverlay {
+      height: 100%;
+      position: relative
+    }
+
+    .meImgImg {
+      border: 1px solid #000;
+      border-radius: 100%;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, .5), -2px -2px 5px rgba(0, 0, 0, .5)
+    }
+
+    .contactTextBox a:hover,
+    .linkList li a:hover,
+    a.projectText:hover {
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, .3)
+    }
+
+    .meImgOverlay {
+      background: rgba(128, 0, 128, .2);
+      top: -100%;
+      border: 1px solid #000;
+      border-radius: 100%;
+      animation: overlayColorChange 20s infinite
+    }
+
+    .linkList,
+    .profileTextBox1,
+    .profileTextBox2 {
+      background: rgba(0, 0, 0, .9)
+    }
+
+    .picBoxText1,
+    .picBoxText2 {
+      display: inline-block;
+      color: rgba(255, 255, 255, .2);
+      font-family: "Shadows Into Light", sans-serif;
+      font-size: 5rem;
+      position: absolute;
+      transform: translateX(-50%)
+    }
+
+    .picBoxText1 {
+      top: -10%;
+      left: -50%;
+      animation: scrollTextRight 30s infinite, colorChange 45s infinite
+    }
+
+    .picBoxText2 {
+      top: 20%;
+      left: 150%;
+      animation: scrollTextLeft 30s 5s infinite, colorChange 40s 5s infinite
+    }
+
+    .picBoxText3,
+    .picBoxText4,
+    .picBoxText5 {
+      display: inline-block;
+      color: rgba(255, 255, 255, .2);
+      font-family: "Shadows Into Light", sans-serif;
+      font-size: 5rem;
+      position: absolute;
+      left: -50%
+    }
+
+    .picBoxText3 {
+      top: 55%;
+      transform: translateX(-50%);
+      animation: scrollTextRight 30s 10s infinite, colorChange 36s 2s infinite
+    }
+
+    .picBoxText4 {
+      top: -5%;
+      transform: translateX(-50%);
+      animation: scrollTextRight 30s 12s infinite, colorChange 42s 5s infinite
+    }
+
+    .picBoxText5 {
+      top: 30%;
+      transform: translateX(-50%);
+      animation: scrollTextLeft 30s 14s infinite, colorChange 39s 4s infinite
+    }
+
+    .picBoxTextSub1,
+    .picBoxTextSub2,
+    .picBoxTextSub3 {
+      display: none;
+      color: rgba(255, 255, 255, 1);
+      font-family: "Shadows Into Light", sans-serif;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem
+    }
+
+    .picBoxTextSub1 {
+      top: 0
+    }
+
+    .picBoxTextSub2 {
+      top: 10%
+    }
+
+    .picBoxTextSub3 {
+      top: 70%
+    }
+
+    .profileTextBox1,
+    .profileTextBox2,
+    .profileTextBox3 {
+      position: absolute;
+      left: -50%;
+      display: block;
+      padding: 25px
+    }
+
+    .linkList,
+    .profileTextBox1,
+    .profileTextBox2,
+    .profileTextBox3,
+    .projectTextBox {
+      transform: translateX(-50%) translateY(-50%);
+      top: 50%;
+      width: 50%
+    }
+
+    .profileTextBox1 {
+      border: 2px solid #000;
+      border-radius: 15px;
+      animation: scrollBoxRight 3s 1, scrollBoxTight 5s 1 3s, scrollBoxRightOut 3s 1 8s
+    }
+
+    .profileTextBox2 {
+      border: 2px solid #000;
+      border-radius: 15px;
+      animation: scrollBoxRight 3s 1 8s, scrollBoxTight 10s 1 11s, scrollBoxRightOut 3s 1 21s
+    }
+
+    .profileTextBox3 {
+      border-radius: 15px;
+      animation: scrollBoxRight 3s 1 21s, scrollBoxTight 5s infinite 24s
+    }
+
+    .profileText {
+      display: block;
+      margin: 0 0 5px;
+      font-family: Ultra, sans-serif;
+      font-size: 2rem;
+      font-weight: 100;
+      color: #fa3232;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+      text-align: center
+    }
+
+    .profileTextHL {
+      color: #fff;
+      font-size: 2.5rem
+    }
+
+    .profileSub {
+      font-size: 1.5rem;
+      color: #969696
+    }
+
+    .profileSub2 {
+      font-size: 3rem;
+      color: #fff
+    }
+
+    .contactTextBox a,
+    .contactTextBox h1,
+    .linkList li a,
+    .projectText {
+      font-family: Ultra, sans-serif;
+      font-size: 2rem
+    }
+
+    .linkList {
+      display: inline-block;
+      list-style: none;
+      position: relative;
+      left: 50%;
+      text-align: center;
+      border: 2px solid #000;
+      border-radius: 15px;
+      padding: 25px;
+      animation: scrollBoxRight 3s 1, textBackChange 60s infinite, borderShift 20s infinite
+    }
+
+    .linkList li {
+      margin-bottom: 10px
+    }
+
+    .linkList li a {
+      text-decoration: none;
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, .3)
+    }
+
+    .linkList li a:hover {
+      text-decoration: underline;
+      color: #000;
+      background: #fff;
+      padding: 5px 15px;
+      border-radius: 15px
+    }
+
+    .projectTextBox {
+      position: absolute;
+      left: 50%;
+      background: rgba(0, 0, 0, .9);
+      border: 2px solid #000;
+      border-radius: 15px;
+      padding: 25px;
+      animation: scrollBoxLeft 3s 1, textBackChange 60s infinite, borderShift 20s infinite
+    }
+
+    .projectText {
+      display: block;
+      margin: 0 0 5px;
+      font-weight: 100;
+      color: #fa3232;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+      text-align: center
+    }
+
+    a.projectText {
+      display: inline-block;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      text-decoration: none;
+      padding-top: 10px;
+      color: #fff
+    }
+
+    a.projectText:hover {
+      text-decoration: underline;
+      color: #000;
+      background: #fff;
+      padding: 5px 15px;
+      border-radius: 15px
+    }
+
+    .contactTextBox {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      background: rgba(0, 0, 0, .9);
+      border: 2px solid #000;
+      border-radius: 15px;
+      padding: 25px;
+      width: 50%;
+      animation: scrollBoxRight 3s 1, textBackChange 60s infinite, borderShift 20s infinite
+    }
+
+    .contactTextBox a,
+    .contactTextBox h1 {
+      margin: 0;
+      text-align: center;
+      font-weight: 100;
+      color: #fff
+    }
+
+    .contactTextBox h1 {
+      margin-bottom: 10px;
+      color: #fa3232
+    }
+
+    .contactTextBox a {
+      display: inline-block;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      text-decoration: none;
+      padding: 5px
+    }
+
+    .contactTextBox a:hover {
+      text-decoration: underline;
+      color: #000;
+      background: #fff;
+      padding: 5px 15px;
+      border-radius: 15px
+    }
+
+    @media screen and (max-width:823px) {
+      .nameBox,
+      .picBox {
+        width: 100%
+      }
+      .topNav {
+        height: 10%
+      }
+      .mobileHeadExt {
+        display: block;
+        height: 10%;
+        background: linear-gradient(to bottom, #000, #595959)
+      }
+      .missionText {
+        display: inline-block;
+        font-family: "Shadows Into Light", sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #000;
+        text-align: center;
+        background: rgba(255, 255, 255, 1);
+        margin-left: 0;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%) rotateX(2deg) rotate(-2deg);
+        padding: 5px 10px;
+        border: 2px solid #000;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+        animation: conFadeIn 5s 1, rocker 20s infinite
+      }
+      .contactBox h1,
+      .sectionRow div h1,
+      .topNav div h1 {
+        font-size: 1.2rem
+      }
+      .siteHead {
+        height: 60%;
+        background: linear-gradient(to bottom, #595959, #000)
+      }
+      .bottomNav,
+      .sectionRow {
+        height: 10%
+      }
+      .spacer1,
+      .spacer2 {
+        height: 100%
+      }
+      .topNav div h1 {
+        text-align: center;
+        margin: 0
+      }
+      .missionBox {
+        display: none
+      }
+      .picBoxTextSub1 {
+        font-size: 1.25rem;
+        top: 5%
+      }
+      .picBoxTextSub2 {
+        font-size: 1.25rem;
+        top: 15%
+      }
+      .picBoxTextSub3 {
+        font-size: 1.25rem;
+        top: 75%
+      }
+      .profileTextBox1,
+      .profileTextBox2,
+      .profileTextBox3 {
+        width: 75%
+      }
+      .projectText {
+        font-size: 1.5rem
+      }
+    }
+
+    @media screen and (max-width:500px) {
+      .projectText {
+        font-size: 1rem
+      }
+      .linkList li a {
+        font-size: 1.25rem
+      }
+      .contactTextBox a,
+      .contactTextBox h1 {
+        font-size: 1.5rem
+      }
+      .contactTextBox,
+      .linkList,
+      .projectTextBox {
+        width: 75%
+      }
+      .profileText {
+        font-size: 1rem
+      }
+      .profileTextHL {
+        font-size: 1.5rem
+      }
+      .profileSub {
+        font-size: .75rem
+      }
+    }
+
+    @media screen and (max-width:360px) {
+      .missionText {
+        font-size: .85rem
+      }
+      .picBoxText1,
+      .picBoxText2,
+      .picBoxText3,
+      .picBoxText4,
+      .picBoxText5 {
+        font-size: 2rem
+      }
+      .picBoxTextSub1 {
+        font-size: 1rem;
+        top: 5%
+      }
+      .picBoxTextSub2 {
+        font-size: 1rem;
+        top: 15%
+      }
+      .picBoxTextSub3 {
+        font-size: 1rem;
+        top: 75%
+      }
+    }
+
+    @media screen and (max-width:320px) {
+      .picBoxTextSub1 {
+        font-size: .85rem;
+        top: 5%
+      }
+      .picBoxTextSub2 {
+        font-size: .85rem;
+        top: 15%
+      }
+      .picBoxTextSub3 {
+        font-size: .85rem;
+        top: 75%
+      }
+      .contactBox h1,
+      .linkList li a,
+      .projectText,
+      .sectionRow div h1 {
+        font-size: 1rem
+      }
+      .contactTextBox a,
+      .contactTextBox h1 {
+        font-size: 1.25rem
+      }
+    }
+
+    @media screen and (max-device-height:460px) {
+      .container,
+      body,
+      html {
+        height: 800px
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mainContainer">
+    <header class="row topNav">
+      <div class="col-5 nameBox">
+        <h1>Phillip Clapham
+          <br>Software Developer</h1>
+      </div>
+      <div class="col-7 missionBox">
+        <h1 class="missionText">I bring beautiful, memorable web experiences to life...</h1>
+      </div>
+    </header>
+    <section class="row mobileHeadExt">
+      <div class="col-12">
+        <h1 class="missionText">I bring beautiful, memorable web experiences to life...</h1>
+      </div>
+    </section>
+    <section class="row siteHead" id="siteHeadID">
+      <div class="col-12 picBox picBoxPos1" id="picBoxID">
+        <h2 class="picBoxText1">Developer</h2>
+        <h2 class="picBoxText2">Designer</h2>
+        <h2 class="picBoxText3">Engineer</h2>
+        <h2 class="picBoxText4">Writer</h2>
+        <h2 class="picBoxText5">Artist</h2>
+        <h3 class="picBoxTextSub1">I make stuff. I break stuff.</h3>
+        <h3 class="picBoxTextSub2">I fix stuff.</h3>
+        <h3 class="picBoxTextSub3">'Nuff said...</h3>
+        <div class="meImgBox" id="meImgBoxID">
+          <div class="meImg">
+            <img src="img/me.webp" alt="Me!" class="meImgImg" id="meImgID">
+          </div>
+          <div class="meImgOverlay" id="meImgOverlayID"></div>
+        </div>
+      </div>
+      <div class="col-12 picBox2" id="picBoxID2">
+        <h1 class="downArrow" id="profileBoxDA">&#8964;</h1>
+        <div class="profileTextBox1">
+          <p class="profileText">
+            <span class="profileTextHL">Hi!</span> I'm Phillip Clapham, a creative and deeply passionate software developer and designer.</p>
+        </div>
+        <div class="profileTextBox2">
+          <p class="profileText">Skills:</p>
+          <p class="profileText profileSub">Javascript and PHP expert</p>
+          <p class="profileText profileSub">WordPress expert</p>
+          <p class="profileText profileSub">Fun and creative designer</p>
+          <p class="profileText profileSub">Experienced writer</p>
+          <p class="profileText profileSub">Unique skillset and experiences</p>
+        </div>
+        <div class="profileTextBox3">
+          <p class="profileText profileSub2">I make and fix and design stuff and things and stuff...with style.</p>
+        </div>
+      </div>
+      <div class="col-12 picBox3" id="picBoxID3">
+        <h1 class="downArrow" id="projectBoxDA">&#8964;</h1>
+        <div class="projectTextBox">
+          <p class="projectText">My Work:</p>
+          <a class="projectText" href="https://inflatableoffice.com" target="_blank" rel="noopener">InflatableOffice</a>
+          <br>
+          <br>
+          <p class="projectText">My Projects:</p>
+          <a class="projectText" href="https://hangrysoup.soupcansam.com" target="_blank" rel="noopener">HangrySoup</a>
+        </div>
+      </div>
+      <div class="col-12 picBox4" id="picBoxID4">
+        <h1 class="downArrow" id="linkBoxDA">&#8964;</h1>
+        <ul class="linkList">
+          <li>
+            <a href="https://www.linkedin.com/in/phillipclapham" target="_blank" rel="noopener">My LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://github.com/phillipclapham" target="_blank" rel="noopener">My GitHub</a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/phillipclapham" target="_blank" rel="noopener">My Facebook</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/phillc42" target="_blank" rel="noopener">My Instagram</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 picBox5" id="picBoxID5">
+        <h1 class="downArrow" id="contactBoxDA">&#8964;</h1>
+        <div class="contactTextBox">
+          <h1>Connect With Me:</h1>
+          <a href="https://www.linkedin.com/in/phillipclapham" target="_blank" rel="noopener">LinkedIn</a>
+          <br>
+          <a href="https://www.facebook.com/phillipclapham" target="_blank" rel="noopener">Facebook</a>
+          <br>
+          <a href="mailto:ninjabunny@soupcansam.com?subject=Hello" target="_top">Email</a>
+        </div>
+      </div>
+    </section>
+    <section class="row sectionRow">
+      <div class="col-4 profileBox" id="profileBoxID">
+        <h1>Profile</h1>
+      </div>
+      <div class="col-4 projectBox" id="projectBoxID">
+        <h1>Projects</h1>
+      </div>
+      <div class="col-4 linkBox" id="linkBoxID">
+        <h1>Links</h1>
+      </div>
+    </section>
+    <div class="row bottomNav">
+      <div class="col-3 spacer1"></div>
+      <div class="col-6 contactBox" id="contactBoxID">
+        <h1>Contact</h1>
+      </div>
+      <div class="col-3 spacer2"></div>
+    </div>
+  </div>
+  <script>
+    function picBoxChange() {
+      picBoxID.classList.remove('picBoxPos1');
+      picBoxID.classList.add('picBoxPos2');
+    }
+
+    let profileBoxID = document.getElementById('profileBoxID');
+    let projectBoxID = document.getElementById('projectBoxID');
+    let linkBoxID = document.getElementById('linkBoxID');
+    let contactBoxID = document.getElementById('contactBoxID');
+    let picBoxID = document.getElementById('picBoxID');
+    let picBoxID2 = document.getElementById('picBoxID2');
+    let picBoxID3 = document.getElementById('picBoxID3');
+    let picBoxID4 = document.getElementById('picBoxID4');
+    let picBoxID5 = document.getElementById('picBoxID5');
+    let profileBoxDA = document.getElementById('profileBoxDA');
+    let projectBoxDA = document.getElementById('projectBoxDA');
+    let linkBoxDA = document.getElementById('linkBoxDA');
+    let contactBoxDA = document.getElementById('contactBoxDA');
+    let meImgBoxID = document.getElementById('meImgBoxID');
+    let meImgID = document.getElementById('meImgID');
+    let meImgOverlayID = document.getElementById('meImgOverlayID');
+
+    profileBoxID.addEventListener('click', () => {
+      picBoxChange();
+      picBoxID.style.display = 'none';
+      picBoxID3.style.display = 'none';
+      picBoxID4.style.display = 'none';
+      picBoxID5.style.display = 'none';
+      picBoxID2.style.display = 'block';
+    });
+
+    projectBoxID.addEventListener('click', () => {
+      picBoxChange();
+      picBoxID.style.display = 'none';
+      picBoxID2.style.display = 'none';
+      picBoxID4.style.display = 'none';
+      picBoxID5.style.display = 'none';
+      picBoxID3.style.display = 'block';
+    });
+
+    linkBoxID.addEventListener('click', () => {
+      picBoxChange();
+      picBoxID.style.display = 'none';
+      picBoxID2.style.display = 'none';
+      picBoxID3.style.display = 'none';
+      picBoxID5.style.display = 'none';
+      picBoxID4.style.display = 'block';
+    });
+
+    contactBoxID.addEventListener('click', () => {
+      picBoxChange();
+      picBoxID.style.display = 'none';
+      picBoxID2.style.display = 'none';
+      picBoxID3.style.display = 'none';
+      picBoxID4.style.display = 'none';
+      picBoxID5.style.display = 'block';
+    });
+
+    profileBoxDA.addEventListener('click', () => {
+      let counter = 0;
+      let t = setInterval(() => {
+        if (counter > 99) {
+          clearInterval(t);
+        } else {
+          counter++;
+          picBoxID2.style.top = `${counter}%`;
+        }
+      }, 15);
+      setTimeout(() => {
+        picBoxID2.style.top = "0%";
+        picBoxID2.style.display = 'none';
+        picBoxID3.style.display = 'none';
+        picBoxID4.style.display = 'none';
+        picBoxID5.style.display = 'none';
+        picBoxID.style.display = 'block';
+      }, 1500);
+    });
+
+    projectBoxDA.addEventListener('click', () => {
+      let counter = 0;
+      let t = setInterval(() => {
+        if (counter > 99) {
+          clearInterval(t);
+        } else {
+          counter++;
+          picBoxID3.style.top = `${counter}%`;
+        }
+      }, 15);
+      setTimeout(() => {
+        picBoxID3.style.top = "0%";
+        picBoxID2.style.display = 'none';
+        picBoxID3.style.display = 'none';
+        picBoxID4.style.display = 'none';
+        picBoxID5.style.display = 'none';
+        picBoxID.style.display = 'block';
+      }, 1500);
+    });
+
+    linkBoxDA.addEventListener('click', () => {
+      let counter = 0;
+      let t = setInterval(() => {
+        if (counter > 99) {
+          clearInterval(t);
+        } else {
+          counter++;
+          picBoxID4.style.top = `${counter}%`;
+        }
+      }, 15);
+      setTimeout(() => {
+        picBoxID4.style.top = "0%";
+        picBoxID2.style.display = 'none';
+        picBoxID3.style.display = 'none';
+        picBoxID4.style.display = 'none';
+        picBoxID5.style.display = 'none';
+        picBoxID.style.display = 'block';
+      }, 1500);
+    });
+
+    contactBoxDA.addEventListener('click', () => {
+      let counter = 0;
+      let t = setInterval(() => {
+        if (counter > 99) {
+          clearInterval(t);
+        } else {
+          counter++;
+          picBoxID5.style.top = `${counter}%`;
+        }
+      }, 20);
+      setTimeout(() => {
+        picBoxID5.style.top = "0%";
+        picBoxID2.style.display = 'none';
+        picBoxID3.style.display = 'none';
+        picBoxID4.style.display = 'none';
+        picBoxID5.style.display = 'none';
+        picBoxID.style.display = 'block';
+      }, 2000);
+    });
+
+    meImgOverlayID.addEventListener('click', () => {
+      let boxheight = 20;
+      meImgBoxID.style.height = "20%";
+      let t1 = setInterval(() => {
+        if (boxheight <= 39) {
+          boxheight++;
+          meImgBoxID.style.height = `${boxheight}%`;
+        } else {
+          clearInterval(t1);
+        }
+      }, 5);
+      let angle = 0;
+      let t2 = setInterval(() => {
+        if (angle < 359) {
+          angle++;
+          meImgID.style.transform = `rotate(${angle}deg)`;
+        } else {
+          clearInterval(t2);
+        }
+      }, 1);
+      let picBoxIDArray = document.querySelectorAll('#picBoxID h2');
+      let picBoxIDArray2 = document.querySelectorAll('#picBoxID h3');
+      for (let i of picBoxIDArray2) {
+        if (i.style.display === "" || i.style.display === "none") {
+          i.style.display = "inline-block";
+        } else {
+          i.style.display = "none";
+        }
+      }
+      for (let i of picBoxIDArray) {
+        if (i.style.display === "" || i.style.display === "inline-block") {
+          i.style.display = "none";
+        } else {
+          i.style.display = "inline-block";
+        }
+      }
+    });
+  </script>
+  <script src="upup.min.js"></script>
+  <script>
+    UpUp.start({
+      "content-url": "offline.html",
+      assets: ["img/me.webp", "upup.min.js"]
+    })
+  </script>
+</body>
+
+</html>
