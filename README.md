@@ -1,5 +1,5 @@
-# automatic-spoon / phill.soupcansam.com
-Phillip Clapham's Professional Portfolio
+# phillipclapham.github.io/automatic-spoon
+Phillip Clapham's Demo Portfolio
 
 ## Specs
 No frontend frameworks used. UpUp library used for service worker.
